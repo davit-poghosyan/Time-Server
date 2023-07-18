@@ -10,43 +10,45 @@ Features
 
 ## Requirements
 
-    C compiler
-    For Windows: Winsock2 library
-    For Linux: Standard C libraries
-
-## Usage
-
-    Clone the repository:
-
-    bash
-
-git clone https://github.com/your-username/time-server.git
-
-Compile the source code:
+### C Compiler:
 
     For Windows:
+        MinGW or Microsoft Visual Studio.
+    For Linux:
+        GCC (GNU Compiler Collection).
 
-    arduino
+### Headers:
 
-Open the project in an IDE or run the appropriate build command for your development environment.
+    For Windows:
+        winsock2.h, ws2tcpip.h headers
+    For Linux:
+       sys/types.h, sys/socket.h, netinet/in.h, arpa/inet.h, netdb.h, unistd.h, and errno.h headers.
+## Usage
+
+### Clone the repository:
+
+    git clone https://github.com/your-username/time-server.git
+
+### Compile the source code:
+
+For Windows:
+
+    Open the project in an IDE or run the appropriate build command for your development environment.
 
 For Linux:
 
     gcc time_server.c -o time_server
 
-Run the compiled executable:
+#### Run the compiled executable:
+For Windows:
 
-    For Windows:
-
-time_server.exe
+    time_server.exe
 
 For Linux:
 
-bash
+    ./time_server
 
-        ./time_server
-
-    The time server will start listening for connections on port 8080. You can access it by opening a web browser and navigating to http://127.0.0.1:8080
+#### The time server will start listening for connections on port 8080. You can access it by opening a web browser and navigating to http://127.0.0.1:8080
 
 
 ##Contributing
